@@ -1,0 +1,48 @@
+
+[
+  {
+    "id": "1",
+    "number": "01",
+    "title": "Aplikasi Buku Tamu Digital",
+    "category": "Web Development",
+    "description": "Perancangan aplikasi buku tamu digital berbasis web untuk membantu proses pencatatan dan pengelolaan kunjungan di Polsek Cicalengka.",
+    "technology": "Laravel • PHP • MySQL",
+    "icon": "📋"
+  },
+  {
+    "id": "2",
+    "number": "02",
+    "title": "Sistem Informasi Inventaris",
+    "category": "System Analysis",
+    "description": "Analisis dan perancangan sistem informasi untuk membantu pengelolaan data inventaris barang di lingkungan sekolah.",
+    "technology": "System Analysis • UML",
+    "icon": "📦"
+  },
+  {
+    "id": "3",
+    "number": "03",
+    "title": "Personal CV Mobile App",
+    "category": "Mobile Development",
+    "description": "Pengembangan aplikasi CV pribadi menggunakan React Native dan Expo dengan fitur profil, keterampilan, dan dashboard akademik.",
+    "technology": "React Native • Expo • JSON",
+    "icon": "📱"
+  },
+  {
+    "id": "4",
+    "number": "04",
+    "title": "Academic Score Dashboard",
+    "category": "Mobile Development",
+    "description": "Perancangan tampilan dashboard akademik untuk menyajikan informasi nilai mahasiswa secara lebih terstruktur dan mudah dipahami.",
+    "technology": "React Native • JSON • UI Design",
+    "icon": "🎓"
+  },
+  {
+    "id": "5",
+    "number": "05",
+    "title": "UI/UX Mobile App Concept",
+    "category": "UI/UX Design",
+    "description": "Eksplorasi konsep desain antarmuka aplikasi mobile dengan memperhatikan tata letak, pemilihan warna, konsistensi komponen, dan kenyamanan pengguna.",
+    "technology": "UI Design • User Experience • Prototyping",
+    "icon": "🎨"
+  }
+]

@@ -1,0 +1,38 @@
+
+{
+  "academic": {
+    "name": "Adinda Paramitha Rizkiani Putri",
+    "nim": "242505002",
+    "course": "Pemrograman Mobile 2",
+    "lecturer": "Iin, M.Kom"
+  },
+  "currentScore": {
+    "score": 94,
+    "grade": "A"
+  },
+  "learningPoints": {
+    "total": 17375
+  },
+  "learningProgress": [
+    {
+      "id": "1",
+      "name": "Attendance",
+      "percentage": 100
+    },
+    {
+      "id": "2",
+      "name": "Practice",
+      "percentage": 97
+    },
+    {
+      "id": "3",
+      "name": "Quest",
+      "percentage": 100
+    },
+    {
+      "id": "4",
+      "name": "Challenge",
+      "percentage": 100
+    }
+  ]
+}

@@ -1,56 +1,112 @@
-# Welcome to your Expo app 👋
+# PERSONAL CV & ACADEMIC SCORE APP
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 1. Deskripsi Proyek
 
-## Get started
+Personal CV & Academic Score App merupakan aplikasi mobile yang dikembangkan menggunakan React Native dan Expo. Aplikasi ini dibuat untuk menampilkan informasi pribadi, keterampilan, portofolio proyek, serta informasi nilai akademik dalam satu aplikasi.
 
-1. Install dependencies
+Aplikasi ini juga dilengkapi dengan halaman Contact yang menyediakan formulir untuk memasukkan nama, email, dan pesan.
 
-   ```bash
-   npm install
-   ```
+## 2. Tujuan Aplikasi
 
-2. Start the app
+Tujuan pengembangan aplikasi ini adalah:
+- Menampilkan informasi profil pribadi secara digital.
+- Menyajikan keterampilan dan pengalaman proyek.
+- Menampilkan informasi nilai akademik.
+- Menyediakan formulir komunikasi.
+- Menerapkan pengembangan aplikasi mobile dengan struktur kode yang terorganisasi.
 
-   ```bash
-   npx expo start
-   ```
+## 3. Fitur Aplikasi
 
-In the output, you'll find options to open the app in a
+| Halaman | Fungsi |
+|---|---|
+| Home | Menampilkan identitas dan foto profil. |
+| About | Menampilkan informasi pribadi. |
+| Skills | Menampilkan daftar keterampilan. |
+| Portfolio | Menampilkan proyek yang pernah dikerjakan. |
+| My Score | Menampilkan informasi nilai akademik. |
+| Contact | Menyediakan formulir untuk memasukkan pesan. |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 4. Teknologi yang Digunakan
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- JSON
+- Visual Studio Code
 
-## Get a fresh project
+## 5. Struktur Proyek
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+UTS-PMB2/
+├── src/
+│   ├── app/
+│   │   ├── index.tsx
+│   │   ├── explore.tsx
+│   │   ├── skills.tsx
+│   │   ├── portfolio.tsx
+│   │   ├── my-score.tsx
+│   │   ├── contact.tsx
+│   │   └── _layout.tsx
+│   ├── components/
+│   │   ├── AcademicDashboard.tsx
+│   │   ├── ProjectCard.tsx
+│   │   ├── app-tabs.tsx
+│   │   └── app-tabs.web.tsx
+│   └── data/
+│       ├── profile.json
+│       ├── academic.json
+│       └── portfolio.json
+└── README.md
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+## 6. Pengelolaan Kode
 
-### Other setup steps
+Pengembangan aplikasi menggunakan pemisahan antara halaman, komponen, dan data.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+- Folder `app` berisi halaman utama aplikasi.
+- Folder `components` berisi komponen yang dapat digunakan kembali.
+- Folder `data` berisi data profil, akademik, dan portofolio dalam format JSON.
 
-## Learn more
+Pemisahan tersebut membantu membuat kode lebih terorganisasi dan mudah dipelihara.
 
-To learn more about developing your project with Expo, look at the following resources:
+## 7. Pengujian Aplikasi
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Pengujian dilakukan pada fitur utama aplikasi dengan hasil sebagai berikut:
 
-## Join the community
+| No. | Fitur yang Diuji | Hasil |
+|---|---|---|
+| 1 | Navigasi enam halaman | Berhasil |
+| 2 | Tampilan data profil | Berhasil |
+| 3 | Tampilan keterampilan | Berhasil |
+| 4 | Tampilan portofolio | Berhasil |
+| 5 | Tampilan nilai akademik | Berhasil |
+| 6 | Validasi formulir Contact | Berhasil |
+| 7 | Penanganan data portofolio kosong | Berhasil |
 
-Join our community of developers creating universal apps.
+## 8. Cara Menjalankan Aplikasi
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Pastikan Node.js dan dependensi proyek sudah terpasang.
+
+1. Buka folder proyek melalui Visual Studio Code.
+2. Buka terminal.
+3. Jalankan perintah:
+
+```bash
+npm install
+```
+
+4. Jalankan aplikasi menggunakan:
+
+```bash
+npx expo start
+```
+
+5. Untuk menjalankan melalui browser, gunakan tombol `w` pada terminal Expo.
+6. Untuk menjalankan melalui perangkat Android, pindai QR Code menggunakan Expo Go.
+
+## 9. Kesimpulan
+
+Personal CV & Academic Score App berhasil dikembangkan menggunakan React Native dan Expo. Aplikasi memiliki enam halaman utama yang menyediakan informasi profil, keterampilan, portofolio, nilai akademik, dan formulir kontak.
+
+Pengembangan aplikasi menerapkan pemisahan komponen dan data serta pengujian terhadap fitur utama. Dokumentasi ini dibuat sebagai panduan untuk memahami struktur dan penggunaan aplikasi.

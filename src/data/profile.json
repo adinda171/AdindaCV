@@ -1,0 +1,55 @@
+
+{
+  "name": "Adinda Paramitha Rizkiani Putri",
+  "nim": "242505002",
+  "interest": "UI/UX Designer",
+  "description": "Saya adalah mahasiswa Sistem Informasi dengan latar belakang analisis sistem dan passion di bidang UI/UX Design. Terbiasa melakukan riset pengguna, merancang information architecture, serta membuat desain antarmuka yang estetis dan responsif untuk mengoptimalkan pengalaman pengguna.",
+  "program": "Mahasiswa Sistem Informasi",
+  "university": "Universitas Ma'soem",
+  "skills": [
+    {
+      "id": "1",
+      "name": "Microsoft Word",
+      "level": 85,
+      "description": "Pengolahan dokumen dan penulisan."
+    },
+    {
+      "id": "2",
+      "name": "Microsoft Excel",
+      "level": 80,
+      "description": "Pengolahan data dan spreadsheet."
+    },
+    {
+      "id": "3",
+      "name": "UI/UX Design",
+      "level": 75,
+      "description": "Perancangan tampilan dan pengalaman pengguna."
+    },
+    {
+      "id": "4",
+      "name": "React Native",
+      "level": 65,
+      "description": "Pengembangan aplikasi mobile."
+    }
+  ],
+  "hobbies": [
+    {
+      "id": "1",
+      "icon": "📚",
+      "name": "Membaca",
+      "description": "Membaca buku dan menambah wawasan."
+    },
+    {
+      "id": "2",
+      "icon": "🎧",
+      "name": "Musik",
+      "description": "Mendengarkan musik di waktu luang."
+    },
+    {
+      "id": "3",
+      "icon": "🏸",
+      "name": "Badminton",
+      "description": "Berolahraga dan menjaga kebugaran."
+    }
+  ]
+}

@@ -1,115 +1,127 @@
-import {
-  Tabs,
-  TabList,
-  TabTrigger,
-  TabSlot,
-  TabTriggerSlotProps,
-  TabListProps,
-} from 'expo-router/ui';
-import { SymbolView } from 'expo-symbols';
-import { Pressable, useColorScheme, View, StyleSheet } from 'react-native';
 
-import { Colors, MaxContentWidth, Spacing } from '@/constants/theme';
+import { Tabs } from 'expo-router';
+import { Text } from 'react-native';
 
-import { ExternalLink } from './external-link';
-import { ThemedText } from './themed-text';
-import { ThemedView } from './themed-view';
+const COLORS = {
+  purple: '#7C5CE0',
+  inactive: '#A99DBB',
+  background: '#FFFFFF',
+  border: '#EDE5F8',
+};
+
+function TextIcon({
+  symbol,
+  focused,
+}: {
+  symbol: string;
+  focused: boolean;
+}) {
+  return (
+    <Text
+      style={{
+        fontSize: focused ? 23 : 21,
+        opacity: focused ? 1 : 0.65,
+      }}
+    >
+      {symbol}
+    </Text>
+  );
+}
 
 export default function AppTabs() {
   return (
-    <Tabs>
-      <TabSlot style={{ height: '100%' }} />
-      <TabList asChild>
-        <CustomTabList>
-          <TabTrigger name="home" href="/" asChild>
-            <TabButton>Home</TabButton>
-          </TabTrigger>
-          <TabTrigger name="explore" href="/explore" asChild>
-            <TabButton>Explore</TabButton>
-          </TabTrigger>
-        </CustomTabList>
-      </TabList>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+
+        tabBarActiveTintColor: COLORS.purple,
+        tabBarInactiveTintColor: COLORS.inactive,
+
+        tabBarStyle: {
+          backgroundColor: COLORS.background,
+          borderTopColor: COLORS.border,
+          borderTopWidth: 1,
+          height: 70,
+          paddingTop: 7,
+          paddingBottom: 8,
+          elevation: 8,
+          shadowColor: '#7C5CE0',
+          shadowOffset: {
+            width: 0,
+            height: -3,
+          },
+          shadowOpacity: 0.08,
+          shadowRadius: 8,
+        },
+
+        tabBarLabelStyle: {
+          fontSize: 10,
+          fontWeight: '600',
+          marginTop: 2,
+        },
+
+        tabBarHideOnKeyboard: true,
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: 'Home',
+          tabBarIcon: ({ focused }) => (
+            <TextIcon symbol="🏠" focused={focused} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="explore"
+        options={{
+          title: 'About',
+          tabBarIcon: ({ focused }) => (
+            <TextIcon symbol="💜" focused={focused} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="skills"
+        options={{
+          title: 'Skills',
+          tabBarIcon: ({ focused }) => (
+            <TextIcon symbol="✨" focused={focused} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="portfolio"
+        options={{
+          title: 'Portfolio',
+          tabBarIcon: ({ focused }) => (
+            <TextIcon symbol="🎨" focused={focused} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="my-score"
+        options={{
+          title: 'My Score',
+          tabBarIcon: ({ focused }) => (
+            <TextIcon symbol="🎓" focused={focused} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="contact"
+        options={{
+          title: 'Contact',
+          tabBarIcon: ({ focused }) => (
+            <TextIcon symbol="💌" focused={focused} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
-
-export function TabButton({ children, isFocused, ...props }: TabTriggerSlotProps) {
-  return (
-    <Pressable {...props} style={({ pressed }) => pressed && styles.pressed}>
-      <ThemedView
-        type={isFocused ? 'backgroundSelected' : 'backgroundElement'}
-        style={styles.tabButtonView}>
-        <ThemedText type="small" themeColor={isFocused ? 'text' : 'textSecondary'}>
-          {children}
-        </ThemedText>
-      </ThemedView>
-    </Pressable>
-  );
-}
-
-export function CustomTabList(props: TabListProps) {
-  const scheme = useColorScheme();
-  const colors = Colors[scheme === 'dark' ? 'dark' : 'light'];
-
-  return (
-    <View {...props} style={styles.tabListContainer}>
-      <ThemedView type="backgroundElement" style={styles.innerContainer}>
-        <ThemedText type="smallBold" style={styles.brandText}>
-          Expo Starter
-        </ThemedText>
-
-        {props.children}
-
-        <ExternalLink href="https://docs.expo.dev" asChild>
-          <Pressable style={styles.externalPressable}>
-            <ThemedText type="link">Docs</ThemedText>
-            <SymbolView
-              tintColor={colors.text}
-              name={{ ios: 'arrow.up.right.square', web: 'link' }}
-              size={12}
-            />
-          </Pressable>
-        </ExternalLink>
-      </ThemedView>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  tabListContainer: {
-    position: 'absolute',
-    width: '100%',
-    padding: Spacing.three,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
-  innerContainer: {
-    paddingVertical: Spacing.two,
-    paddingHorizontal: Spacing.five,
-    borderRadius: Spacing.five,
-    flexDirection: 'row',
-    alignItems: 'center',
-    flexGrow: 1,
-    gap: Spacing.two,
-    maxWidth: MaxContentWidth,
-  },
-  brandText: {
-    marginRight: 'auto',
-  },
-  pressed: {
-    opacity: 0.7,
-  },
-  tabButtonView: {
-    paddingVertical: Spacing.one,
-    paddingHorizontal: Spacing.three,
-    borderRadius: Spacing.three,
-  },
-  externalPressable: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: Spacing.one,
-    marginLeft: Spacing.three,
-  },
-});
